@@ -1,0 +1,2 @@
+# mxGraph-worker-render
+基于mxGraph生成的图形使用webwroker进行解析并渲染为canvas
