@@ -1,22 +1,22 @@
-import PromiseWorker from "promise-worker";
+import WorkerPromise from "./worker-promise";
 import Worker from "worker-loader!./graph-render.worker";
 
-const promiseWorker = new PromiseWorker(new Worker());
+const promise = new WorkerPromise(new Worker());
 
 export default {
   send(msg) {
-    return promiseWorker.postMessage({
+    return promise.postMessage({
       type: "message",
       msg,
     });
   },
-  init(cnavas) {
-    return promiseWorker.postMessage(
+  initCanvas(canvas) {
+    return promise.postMessage(
       {
         type: "initCanvas",
-        cnavas,
+        canvas,
       },
-      [cnavas]
+      [canvas]
     );
   },
 };

@@ -5,6 +5,6 @@ registerPromiseWorker((msg) => {
   if (msg.type === "message") {
     return core.test(msg);
   } else if (msg.type === "initCanvas") {
-    return core.test(msg);
+    return core.initCanvas(msg);
   }
 });
