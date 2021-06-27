@@ -12,6 +12,7 @@
     "promise-worker": "^2.0.1",
     "vue": "^2.6.11",
     "worker-loader": "^3.0.8",
+    "xmldom": "^0.6.0",
     "zrender": "^5.1.1"
   },
   "devDependencies": {

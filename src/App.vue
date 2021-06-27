@@ -13,7 +13,7 @@ import RenderWorker from "./graph-render-worker";
 export default {
   methods: {
     onTestClick() {
-      RenderWorker.send({ msg: "hello!!" }).then((result) => {
+      RenderWorker.send({ msg: "hello!!"}).then((result) => {
         console.log(result);
       });
     },
